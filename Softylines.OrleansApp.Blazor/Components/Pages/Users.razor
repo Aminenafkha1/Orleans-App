@@ -1,0 +1,61 @@
+@page "/"
+@using Softylines.OrleansApp.Blazor.Models
+@using Softylines.OrleansApp.Blazor.Services
+ @using MudBlazor 
+@inject IUserService userService
+@inject IDialogService DialogService
+
+<h1>To Do List</h1>
+
+<p>This component demonstrates fetching data from Database.</p>
+
+@if (toDoList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    
+    
+    <MudSimpleTable Style="overflow-x: auto;">
+        <thead>
+        <tr>
+            
+                <th>Name</th>
+                <th>Last Name</th> 
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var x in toDoList)
+        {
+            <tr> 
+               
+                    <td>@x.Name</td>
+                    <td>@x.LastName</td>
+ 
+            </tr>
+        }
+        </tbody>
+    </MudSimpleTable>
+}
+<div>
+    <MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+    Add User
+    </MudButton>
+    </div>
+
+
+@code {
+      List<User> toDoList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        toDoList = await userService.GetAllUsers();
+    }
+    
+    private void OpenDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<NewUserDialog>("New User", options);
+    }
+}

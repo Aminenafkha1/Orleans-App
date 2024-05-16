@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Softylines.OrleansApp.Blazor.props" />
+</Project>

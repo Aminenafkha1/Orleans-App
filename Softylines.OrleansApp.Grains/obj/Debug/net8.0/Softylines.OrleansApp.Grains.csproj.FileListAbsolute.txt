@@ -1,0 +1,15 @@
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/bin/Debug/net8.0/Softylines.OrleansApp.Grains.deps.json
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/bin/Debug/net8.0/Softylines.OrleansApp.Grains.dll
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/bin/Debug/net8.0/Softylines.OrleansApp.Grains.pdb
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/bin/Debug/net8.0/Softylines.OrleansApp.Abstractions.dll
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/bin/Debug/net8.0/Softylines.OrleansApp.Abstractions.pdb
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.csproj.AssemblyReference.cache
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.AssemblyInfoInputs.cache
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.AssemblyInfo.cs
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.csproj.CoreCompileInputs.cache
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylin.ABD84559.Up2Date
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.dll
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/refint/Softylines.OrleansApp.Grains.dll
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/Softylines.OrleansApp.Grains.pdb
+/Users/aminenafkha/RiderProjects/Softylines.OrleansApp/Softylines.OrleansApp.Grains/obj/Debug/net8.0/ref/Softylines.OrleansApp.Grains.dll

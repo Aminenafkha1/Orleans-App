@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Migrations\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Orleans.Client" Version="8.1.0" />
+      <PackageReference Include="Microsoft.Orleans.Clustering.AdoNet" Version="8.1.0" />
+      <PackageReference Include="Microsoft.Orleans.Core" Version="8.1.0" />
+      <PackageReference Include="Microsoft.Orleans.Persistence.AdoNet" Version="8.1.0" />
+      <PackageReference Include="MudBlazor" Version="6.19.1" />
+      <PackageReference Include="MudBlazor.ThemeManager" Version="1.0.9" />
+      <PackageReference Include="OrleansDashboard" Version="8.0.0" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Softylines.OrleansApp.Abstractions\Softylines.OrleansApp.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+ @using Softylines.OrleansApp.Blazor.Models
+@using MudBlazor
+
+ <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+     
+
+      <MudDialog>
+          <TitleContent>
+              <MudText Typo="Typo.h6" >
+                   New User?
+              </MudText>
+          </TitleContent>
+          <DialogContent>
+              <MudTextField Label="First name" HelperText="Max. 8 characters"
+                            @bind-Value="model.Name" For="@(() => model.Name)"/>
+              <MudTextField Label="Email" Class="mt-3"
+                            @bind-Value="model.LastName" For="@(() => model.LastName)"/>
+          </DialogContent>
+          <DialogActions>
+              <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
+
+          </DialogActions>
+      </MudDialog>
+
+
+
+</EditForm>
+      @code {
+          User model = new User();
+          private void OnValidSubmit(EditContext context)
+          {
+               StateHasChanged();
+          }
+
+}
