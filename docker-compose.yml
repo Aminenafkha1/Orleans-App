@@ -6,7 +6,5 @@
     build:
       context: .
       dockerfile: Softylines.OrleansApp.Silo/Dockerfile
-    ports:
-      - 11111:11111
-      - 30000:30000
+ 
  
