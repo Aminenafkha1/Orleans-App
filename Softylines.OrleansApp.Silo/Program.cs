@@ -58,7 +58,7 @@ static void StartSilo(string[ ] args)
                     options.HostSelf = true;
                     options.CounterUpdateIntervalMs = 1000;
                 }) 
-                .ConfigureLogging(logging =>
+                 .ConfigureLogging(logging =>
                 {
                     logging
                         .AddConsole();
