@@ -17,8 +17,7 @@ catch (Exception ex)
 {
     Console.WriteLine(ex);
     return 1;
-}
-
+} 
 static async Task<IHost> StartSilo(string[ ] args)
 {
   
