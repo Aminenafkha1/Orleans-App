@@ -23,7 +23,7 @@ catch (Exception ex)
 }
 static async Task<IHost> StartSiloAsync()
 {
-    var persistanceConnectionString = "Server=192.168.30.55;Database=orleans;User Id=sa;Password=Monemnejijannet1;";
+    var persistanceConnectionString = "Server=192.168.30.35;Database=OrleansDb;User Id=sa;Password=Anis2004#;";
     var name = Dns.GetHostName(); // get container id
     var ip = Dns.GetHostEntry(name).AddressList.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
     var builder = Host
@@ -33,8 +33,8 @@ static async Task<IHost> StartSiloAsync()
             silo
                 .Configure<ClusterOptions>(options =>
                 {
-                    options.ClusterId = "aminedev";
-                    options.ServiceId = "amineservice";
+                    options.ClusterId = "dev";
+                    options.ServiceId = "GloboTicket";
                 })
                 .UseAdoNetClustering(options =>
                 {
@@ -71,3 +71,6 @@ static async Task<IHost> StartSiloAsync()
 
     return host;
 }
+
+
+
