@@ -1,5 +1,7 @@
 ﻿services:
   softylines.orleansapp.silo:
+    network_mode:
+      - host
     image: softylines.orleansapp.silo
     build:
       context: .
@@ -7,5 +9,4 @@
     ports:
       - 11111:11111
       - 30000:30000
-         
  

@@ -6,10 +6,11 @@ using Microsoft.Extensions.Logging;
 using Orleans.Configuration;
 using System.Net;
 using Softylines.OrleansApp.Silo;
+using System.Net.Sockets;
 
 try
 {
-    StartSilo(args);
+    await StartSilo(args);
     return 0;
 }
 catch (Exception ex)
@@ -18,12 +19,14 @@ catch (Exception ex)
     return 1;
 }
 
-static void StartSilo(string[ ] args)
+static async Task<IHost> StartSilo(string[ ] args)
 {
   
 
     string sqlServerConnectionString = "Server=192.168.30.35;Database=OrleansDb;User Id=sa;Password=Anis2004#;";
- 
+     var name = Dns.GetHostName(); // get container id
+    var ip = Dns.GetHostEntry(name).AddressList.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+
     int siloPort = 11111;
     int gatewayPort = 30000;
     var builder = Host.CreateDefaultBuilder()
@@ -37,7 +40,7 @@ static void StartSilo(string[ ] args)
                 })
                 .Configure<ClusterOptions>(options =>
                 {
-                    options.ClusterId = "dev";
+                    options.ClusterId = "aminedev";
                     options.ServiceId = "aniss";
                 }) 
                 .ConfigureEndpoints(siloPort: siloPort, gatewayPort: gatewayPort)
@@ -66,6 +69,6 @@ static void StartSilo(string[ ] args)
         });
 
     var app = builder.Build();
-    app.Run();
+    await app.RunAsync();
 }
 
