@@ -1,8 +1,12 @@
 ﻿services:
   softylines.orleansapp.silo:
-    image: softylines.orleansapp.silo 
+    image: softylines.orleansapp.silo
+    platform: linux/arm64
     build:
       context: .
       dockerfile: Softylines.OrleansApp.Silo/Dockerfile
     ports:
-      - 30300:30300
+      - 11111:11111
+      - 30000:30000
+        
+ 

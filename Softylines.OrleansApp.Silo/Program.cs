@@ -24,7 +24,8 @@ static void StartSilo(string[ ] args)
 
     string sqlServerConnectionString = "Server=192.168.30.35;Database=OrleansDb;User Id=sa;Password=Anis2004#;";
  
-
+    int siloPort = 11111;
+    int gatewayPort = 30000;
     var builder = Host.CreateDefaultBuilder()
         .UseOrleans((context, silo) =>
         {
@@ -38,15 +39,9 @@ static void StartSilo(string[ ] args)
                 {
                     options.ClusterId = "dev";
                     options.ServiceId = "aniss";
-                })
-                .Configure<EndpointOptions>(options =>
-                {
-                    options.AdvertisedIPAddress = IPAddress.Parse("192.168.0.142");
-                    options.SiloPort = 30300;
-                    options.GatewayPort = 30000;
-                    options.SiloListeningEndpoint = new IPEndPoint(IPAddress.Any, 30300);
-                    options.GatewayListeningEndpoint = new IPEndPoint(IPAddress.Any, 30000);
-                })
+                }) 
+                .ConfigureEndpoints(siloPort: siloPort, gatewayPort: gatewayPort)
+
                 // .ConfigureEndpoints(default, default,  default, listenOnAnyHostAddress: true)
                 .AddAdoNetGrainStorage(
                         name: "GrainStore",
