@@ -33,7 +33,7 @@ static async Task<IHost> StartSiloAsync()
             silo
                 .Configure<ClusterOptions>(options =>
                 {
-                    options.ClusterId = "dev";
+                    options.ClusterId = "aminedev";
                     options.ServiceId = "GloboTicket";
                 })
                 .UseAdoNetClustering(options =>
